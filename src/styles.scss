@@ -1,0 +1,102 @@
+@import 'assets/scss/main';
+
+.container {
+  width: 100%;
+}
+
+/*Banner Area*/
+
+/*About Area*/
+
+ul.about-content {
+  width: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-content li {
+  padding: 20px;
+  height: 290px;
+  background-clip: content-box;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-left {
+  flex-basis: 50%;
+  height: 200px;
+  //background-image: url('./assets/images/banner.jpg') ;
+}
+
+.about-right {
+  flex-basis: 50%;
+
+  h2 {
+    margin-bottom: 3%;
+  }
+}
+
+.about-area {
+  p {
+    max-width: 800px;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .section-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    margin-bottom: 5%;
+  }
+}
+
+.about-btn {
+  padding: 15px 35px;
+  background: var(--orange);
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #fff;
+
+  &:hover {
+    background-color: darken(#FF6C12, 15%);
+    transition:  .3s;
+  }
+}
+
+
+
+
+@media (max-width: 1000px) {
+  header {
+    padding: 20px 50px;
+  }
+  .about-left,
+  .about-right {
+    flex-basis: 100%;
+  }
+  .about-content li {
+    padding: 8px;
+  }
+}
+//@media (max-width: 700px) {
+//  header {
+//    flex-direction: column;
+//
+//    &h2 {
+//      margin-bottom: 15px;
+//    }
+//
+//    &nav li {
+//      margin: 0 7px
+//    }
+//  }
+//}
+
+

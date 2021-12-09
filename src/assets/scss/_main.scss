@@ -1,0 +1,27 @@
+@import './variables';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Popins, "Helvetica Neue", sans-serif;
+}
+
+body {
+  background-color: #141417;
+}
+
+ul,nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+}

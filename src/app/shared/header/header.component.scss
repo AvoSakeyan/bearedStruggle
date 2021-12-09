@@ -1,0 +1,132 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  background: #09090A;
+  opacity: 0.95;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+header .logo {
+  img {
+    width: 180px;
+    border-radius: 10px;
+  }
+}
+
+header .navigation {
+  display: flex;
+
+  a {
+    color: var(--white);
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 6px 30px;
+    border-radius: 20px;
+    margin: 0 15px;
+    font-size: large;
+    transition: 0.3s;
+    transition-property: background;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      background-color: var(--white);
+      color: #1D1D21 ;
+      transition: 0.3s;
+    }
+  }
+}
+
+
+label {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  header .navigation {
+    display: none;
+  };
+
+  label {
+    display: block;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+    transition-property: color;
+    color: black;
+  }
+
+  label .close-btn {
+    display: none;
+  }
+
+
+  #check:checked ~ header .navigation {
+    position: fixed;
+    background: rgba(131, 131, 131, 0.9);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #check:checked ~ header .navigation a {
+    font-weight: 700;
+    margin-right: 0;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    padding: 10px 50px;
+
+    &:hover {
+      background: black;
+      color: white;
+      transition: 0.3s;
+    }
+
+
+  }
+
+  label .menu-btn {
+    position: absolute;
+    color: white;
+  }
+
+
+  #check:checked ~ header label .menu-btn {
+    display: none;
+  }
+
+  #check:checked ~ header label .close-btn {
+    display: block;
+    z-index: 2;
+    position: fixed;
+    color: black;
+  }
+}
+
+
+@media (max-width: 430px) {
+  header {
+    padding: 10px 51px 10px 19px
+  }
+}

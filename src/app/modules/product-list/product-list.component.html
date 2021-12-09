@@ -1,0 +1,23 @@
+<!--<div class="product-image"></div>-->
+<div class="products-container">
+  <div class="action">
+    <div class="input-search">
+      <i class="fas fa-search"></i>
+      <input type="text" [(ngModel)]="searchText"  placeholder="Search by name">
+    </div>
+
+    <div class="sort-order">
+      this should be SortBY
+    </div>
+  </div>
+
+
+<!--  <input type="text">-->
+  <div class="cards">
+    <div *ngFor="let product of products | searchFilter : searchText">
+      <app-product
+      [product]="product"
+      ></app-product>
+    </div>
+  </div>
+</div>

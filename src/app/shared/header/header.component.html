@@ -1,0 +1,24 @@
+<section>
+  <input type="checkbox" id="check">
+  <header>
+    <div class="logo">
+      <a href="/"><img src="../../../assets/images/70-701825_beard-struggle-logo-transparent-hd-png-download.png" alt="Girl in a jacket"></a>
+    </div>
+
+    <nav class="navigation" *ngIf="isLogged">
+      <a [routerLink]="'/product-list'">Products</a>
+      <a [routerLink]="'/galery'">Gallery</a>
+      <a [routerLink]="'/about'">About</a>
+      <a (click)="logOut()">Log Out</a>
+    </nav>
+
+    <label for="check">
+      <i class="fas fa-bars menu-btn"></i>
+      <i class="fas fa-times close-btn"></i>
+    </label>
+  </header>
+
+  <!--    <div class="media_icons">-->
+  <!--      <a href=""><i class="fab fa-facebook"></i></a>-->
+  <!--    </div>-->
+</section>

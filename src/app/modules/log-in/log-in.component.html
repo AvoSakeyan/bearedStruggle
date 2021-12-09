@@ -1,0 +1,29 @@
+
+<div class="bg-image">
+</div>
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <span class="title">LOGIN</span>
+    <div class="input-box">
+
+      <div class="input-container">
+        <label for="username">Username</label>
+        <input type="text" required="" formControlName="username" id="username"/>
+        <div *ngIf="form.get('username').errors && form.get('username').touched || submitted" class="form-error">
+          <div [hidden]="!form.get('username').errors['required']">This is a required field</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" id="password"/>
+        <div *ngIf="form.get('password').errors && form.get('password').touched || submitted" class="form-error">
+          <div [hidden]="!form.get('password').errors['required']">This is a required field</div>
+        </div>
+      </div>
+    </div>
+
+
+    <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+  </form>
+</div>

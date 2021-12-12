@@ -1,4 +1,3 @@
-<!--<div class="product-image"></div>-->
 <div class="products-container">
   <div class="action">
     <div class="input-search">
@@ -9,8 +8,6 @@
     <div class="sort-order">
       <span>Sort by</span>
       <select class="sortBy" [(ngModel)]="sortBy">
-<!--        this is placeholder for selectOption, but does not work along with ngModel-->
-<!--        <option value="" disabled selected>Sort By</option>-->
         <option *ngFor="let sort of sortValues" [ngValue]="sort.value">{{sort.label}}</option>
       </select>
     </div>

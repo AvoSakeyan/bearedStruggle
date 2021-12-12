@@ -76,7 +76,6 @@ label {
     display: none;
   }
 
-
   #check:checked ~ header .navigation {
     position: fixed;
     background: black;
@@ -111,7 +110,6 @@ label {
     color: white;
   }
 
-
   #check:checked ~ header label .menu-btn {
     display: none;
   }
@@ -123,7 +121,6 @@ label {
     color: White;
   }
 }
-
 
 @media (max-width: 430px) {
   header {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { PageNotFoundComponent } from "./shared/page-not-found/page-not-found.component";
 import { LogInComponent } from './modules/log-in/log-in.component';
 import { NotAuthGuard } from "./shared/guards/not-auth.guard";
@@ -14,7 +15,6 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   { path: '**', component: PageNotFoundComponent }
-
 ];
 
 @NgModule({

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../services/products.service';
-import { Product } from '../infrastructure/interfaces/product.interface';
 import { MatDialog } from "@angular/material/dialog";
-import {ProductDetailsComponent} from "./product-details/product-details.component";
+
+import { Product } from '../infrastructure/interfaces/product.interface';
+import { ProductsService } from '../services/products.service';
+import { ProductDetailsComponent } from "./product-details/product-details.component";
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,6 @@ import {ProductDetailsComponent} from "./product-details/product-details.compone
 export class ProductListComponent implements OnInit {
   products: Product[]
   searchText: string;
-  showModal = false;
   sortBy: string;
 
   sortValues = [

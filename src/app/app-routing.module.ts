@@ -6,14 +6,14 @@ import { NotAuthGuard } from "./shared/guards/not-auth.guard";
 import { AuthGuard } from "./shared/guards/auth.guard";
 
 const routes: Routes = [
-  {path: '', redirectTo: 'login', pathMatch: 'full'},
-  {path: 'login', component: LogInComponent, canActivate: [NotAuthGuard]},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'login', component: LogInComponent, canActivate: [NotAuthGuard] },
   {
     path: 'product-list',
     loadChildren: () => import('./modules/product-list/products.module').then(m => m.ProductsModule),
     canActivate: [AuthGuard],
   },
-  {path: '**', component: PageNotFoundComponent}
+  { path: '**', component: PageNotFoundComponent }
 
 ];
 

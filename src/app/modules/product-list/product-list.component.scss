@@ -38,24 +38,37 @@
 }
 
 .sort-order {
-  width: 200px;
-  height: 30px;
-  background-color: #090A0A;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
   color: #FFFFFF;
-  padding: 5px 0 0 5px;
-  border-radius: 5px;
+  span {
+    text-align: center;
+    margin-right: 8px;
+  }
+
+  .sortBy {
+    min-width: 150px;
+    //background-color: #090A0A;
+    //color: #FFFFFF;
+    border: 1px solid #5a4c01;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
 }
 
+
 .input-search input {
-  padding: 8px 20px;
+  padding: 8px 25px;
   background-color: #090A0A;
   color: #FFFFFF;
   border-radius: 5px;
+  border: 1px solid #5a4c01;
 }
 
 .input-search i {
   position: absolute;
-  padding: 10px 2px 0 2px;
+  padding: 10px 5px 0 5px;
   color: #FFFFFF;
 }
 

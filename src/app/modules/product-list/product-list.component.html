@@ -7,17 +7,21 @@
     </div>
 
     <div class="sort-order">
-      this should be SortBY
+      <span>Sort by</span>
+      <select class="sortBy" [(ngModel)]="sortBy">
+<!--        this is placeholder for selectOption, but does not work along with ngModel-->
+<!--        <option value="" disabled selected>Sort By</option>-->
+        <option *ngFor="let sort of sortValues" [ngValue]="sort.value">{{sort.label}}</option>
+      </select>
     </div>
   </div>
 
-
-<!--  <input type="text">-->
   <div class="cards">
-    <div *ngFor="let product of products | searchFilter : searchText">
+    <div *ngFor="let product of products | searchFilter : searchText | sort : sortBy" (click)="openDialog(product)">
       <app-product
       [product]="product"
       ></app-product>
     </div>
   </div>
 </div>
+

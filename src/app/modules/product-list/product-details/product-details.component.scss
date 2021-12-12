@@ -1,0 +1,46 @@
+.popup-window {
+  background-color: #090A0A;
+  color: #FFFFFF;
+  min-width: 700px;
+  width: 800px;
+  height: 700px;
+
+  .carousel-slide {
+    width: 500px;
+  }
+
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .pr-qnt {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 10px;
+
+      .quantity {
+        margin: 5px;
+        height: 30px;
+        width: 50px;
+        padding: 5px;
+        border: 2px solid #5a4c01;
+
+      }
+
+      .price {
+        text-align: right;
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    .total-amount {
+      margin: 10px 10px;
+
+      span {
+        font-size: 18px;
+      }
+    }
+  }
+}
